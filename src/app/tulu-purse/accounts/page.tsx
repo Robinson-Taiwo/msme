@@ -49,9 +49,9 @@ const Account = () => {
 
 
 
-        <div className="flex flex-row w-full p-4 justify-center gap-[74px] ">
+        <div className="flex flex-row w-full p-4 justify-center gap-4 md:gap-[74px] ">
 
-          <button className="flex w-[216px] text-white p-0 rounded-md border border-white border-opacity-10 h-[71px] flex-col">
+          <button className="flex w-[216px]    text-white p-0 rounded-md border border-white border-opacity-10 h-[71px] flex-col">
             <span className="bg-black w-full flex items-center rounded-t-md justify-center h-[50%]">
               <Plus className="h-[24px] w-6" />
             </span>
@@ -60,7 +60,7 @@ const Account = () => {
             </span>
           </button>
 
-          <button className="flex w-[216px] text-white p-0 rounded-md border border-white border-opacity-10 h-[71px] flex-col">
+          <button className="flex w-[216px]  text-white p-0 rounded-md border border-white border-opacity-10 h-[71px] flex-col">
             <span className="bg-black w-full flex items-center rounded-t-md justify-center h-[50%]">
               <ArrowUpRight className="h-[24px] w-6" />
             </span>
@@ -69,7 +69,7 @@ const Account = () => {
             </span>
           </button>
 
-          <button className="flex w-[216px] text-white p-0 rounded-md border border-white border-opacity-10 h-[71px] flex-col">
+          <button className="flex w-[216px]  text-white p-0 rounded-md border border-white border-opacity-10 h-[71px] flex-col">
             <span className="bg-black w-full flex items-center rounded-t-md justify-center h-[50%]">
               <ArrowRightLeft className="h-[24px] w-6" />
             </span>
