@@ -27,18 +27,18 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Mobile toggle button */}
+      {/* Menu button (visible on mobile & tablet views) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden fixed top-4 left-4 z-50 bg-black text-white p-2 rounded-full"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-black text-white p-2 rounded-full"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Sidebar */}
       <div
-        className={`bg-black h-screen min-w-[15.325rem] w-[15.625rem] fixed md:relative z-40 transition-all duration-300
-          ${isOpen ? "left-0" : "-left-[16rem]"} md:left-0`}
+        className={`bg-black h-screen min-w-[15.325rem] w-[15.625rem] fixed z-40 transition-all duration-300
+          ${isOpen ? "left-0" : "-left-[16rem]"} md:${isOpen ? "left-0" : "-left-[16rem]"} lg:left-0`}
       >
         <div className="w-full mb-14 pl-8 pt-7">
           <Image src={logo} alt="purse-logo" width={122} height={16} />
@@ -71,8 +71,8 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* Overlay when sidebar is open on mobile */}
-      {isOpen && <div className="fixed inset-0 bg-black opacity-50 md:hidden" onClick={() => setIsOpen(false)} />}
+      {/* Overlay when sidebar is open */}
+      {isOpen && <div className="fixed inset-0 bg-black opacity-50 lg:hidden" onClick={() => setIsOpen(false)} />}
     </>
   );
 };

@@ -29,7 +29,7 @@ export default function RootLayout({
             <Navbar />
 
             {/* Children Content with Scroll */}
-            <div className="flex-1 overflow-y-auto md:px-9 pt-6 ">{children}</div>
+            <div className="flex-1 overflow-y-auto p-6 md:px-9 pt-6 ">{children}</div>
           </div>
         </div>
       </body>
