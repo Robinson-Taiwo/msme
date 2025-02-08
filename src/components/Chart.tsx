@@ -32,7 +32,7 @@ const ExchangeRateChart = () => {
 
       {/* Title, Exchange Rate & Time Range Buttons */}
       <div className="flex flex-wrap justify-between items-center mb-4">
-        <div  className="flex flex-col gap-[10px]" >
+        <div className="flex flex-col gap-[10px]" >
           <h2 className="text-[14px] font-normal text-white text-opacity-50 ">Today</h2>
           <p className="text-xl flex items-center gap-2">
             <span className="font-bold">€1 EUR</span> = <span className="text-[#FFD900]">$952 USD</span>
@@ -114,6 +114,7 @@ const ExchangeRateChart = () => {
                 const { cx, cy, index } = props;
                 return (
                   <circle
+                    key={index} // ✅ Add this key
                     cx={cx}
                     cy={cy}
                     r={index === selectedIndex ? 5 : 0} // Set radius to 0 when not selected

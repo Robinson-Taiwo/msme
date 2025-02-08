@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
-
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -240,7 +239,7 @@ const TransactionComponent = () => {
 
       <div className="pt-6 relative  flex items-center justify-between flex-col md:flex-row h-fit w-full">
 
-        <div className="w-fit">
+        <div className="w-fit text-white text-opacity-50 ">
 
         <Pagination>
           <PaginationContent>
@@ -248,7 +247,7 @@ const TransactionComponent = () => {
               {/* <PaginationPrevious href="#" /> */}
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink  className="bg-[#FFD900]" isActive   href="#">1</PaginationLink>
+              <PaginationLink  className="bg-[#FFD900] text-black " isActive   href="#">1</PaginationLink>
             </PaginationItem>
             <PaginationItem>
               <PaginationLink href="#" className="bg-[#181818] outtline-none border-none hover:bg-[#ffd900] " >
@@ -270,7 +269,7 @@ const TransactionComponent = () => {
             </PaginationItem>
 
             <PaginationItem>
-              <PaginationNext className="bg-[#FFD900]"  href="#" />
+              <PaginationNext className="bg-[#FFD900] text-black "  href="#" />
             </PaginationItem>
           </PaginationContent>
         </Pagination>
