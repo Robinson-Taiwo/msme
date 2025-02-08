@@ -27,7 +27,7 @@ const AccountOverview = () => {
 
       <div className="flex flex-row w-full justify-between items-center text-white text-opacity-50 gap-4  " >
 
-        <div className="flex-col flex">
+        <div className="flex-col gap-[10px] flex">
           <div>
             <div className="flex flex-row items-center text-white text-opacity-50 gap-4  " >
               <span className="md:text-[20px]  text-sm  text-white text-opacity-50 ">
@@ -47,7 +47,7 @@ const AccountOverview = () => {
         </div>
 
 
-        <div className="flex-col flex">
+        <div className="flex-col gap-[10px] flex">
           <div>
             <div className="flex flex-row items-center text-white text-opacity-50 gap-4  " >
               <span className="md:text-[20px]  text-sm  text-white text-opacity-50 ">

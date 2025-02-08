@@ -37,7 +37,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`bg-black h-screen min-w-[15.325rem] w-[15.625rem] fixed z-40 transition-all duration-300
+        className={`bg-black h-screen min-w-[15.325rem] w-[15.625rem] hidden lg:flex flex-col transition-all duration-300
           ${isOpen ? "left-0" : "-left-[16rem]"} md:${isOpen ? "left-0" : "-left-[16rem]"} lg:left-0`}
       >
         <div className="w-full mb-14 pl-8 pt-7">
@@ -49,7 +49,7 @@ const Sidebar = () => {
         <div className="navs flex flex-col gap-2 mb-9 w-full">
           {navItems.map(({ img, text, path }, index) => (
             <Link key={index} href={path} className={`w-full h-[46px] flex items-center pl-[39px] gap-[10px] text-sm transition-colors 
-              ${pathname === path ? "bg-[#181818] border-r border-r-yellow-500 text-white" : "bg-black text-white/70 hover:text-white"}
+              ${pathname === path ? "bg-[#181818] border-r border-r-[#FFD900] text-white" : "bg-black text-white/70 hover:text-white"}
             `}>
               <Image src={img} alt="icon" width={16} height={16} />
               <span>{text}</span>
