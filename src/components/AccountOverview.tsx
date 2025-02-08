@@ -3,7 +3,7 @@ import React from 'react'
 
 const AccountOverview = () => {
   return (
-    <div className="w-full rounded-[20px] h-[211px] lg:p-9 p-4  bg-center bg-[#181818] bg-cover bg-no-repeat  text-white flex flex-col justify-between items-center gap-9  " style={{ backgroundImage: "url('/images/bg.png')" }} >
+    <div className="w-full rounded-[20px] h-[211px] lg:p-9 p-4 md:p-6  bg-center bg-[#181818] bg-cover bg-no-repeat  text-white flex flex-col justify-between items-center gap-9  " style={{ backgroundImage: "url('/images/bg.png')" }} >
 
       <div className="flex-row justify-between w-full flex  ">
 
@@ -60,8 +60,8 @@ const AccountOverview = () => {
             </div>
           </div>
 
-          <div className="font-bold text-base text-white text-[30px]">
-            $2450.90 <span className="md:text-[20px] text-base ">USD</span>
+          <div className="font-bold text-base text-white md:text-[30px]">
+            $2450.90 <span className="md:text-[20px]  text-base ">USD</span>
           </div>
 
         </div>
