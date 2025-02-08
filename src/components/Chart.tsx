@@ -25,7 +25,7 @@ const ExchangeRateChart = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full mt-[40px] pb-6 lg:pt-[29px] lg:pb-[39px] lg:px-[42px]  mb-[42px] bg-[#181818] text-white  max-h-[545px] p-5 rounded-lg">
+    <div className="w-full mt-[40px] pb-6 lg:pt-[29px] pt-5 lg:pb-[39px] lg:px-[42px]  mb-[42px] bg-[#181818] text-white  max-h-[545px] pl-5 rounded-lg">
 
       <h2 className="text-lg mb-[34px] font-bold">Exchange Rate</h2>
 
@@ -40,7 +40,7 @@ const ExchangeRateChart = () => {
           </p>
         </div>
 
-        <div className="flex mt-4 lg:mmt-0 gap-2">
+        <div className="flex pr-6 mt-4 lg:mt-0 gap-2">
           {["Week", "Month", "Year", "Max"].map((label, index) => (
             <Button
               key={index}

@@ -37,7 +37,7 @@ const Transaction = () => {
         <div className="flex w-full flex-col">
             <div className="w-full justify-between mb-6 flex flex-row">
                 <h2 className="text-white text-lg font-bold">Recent Transactions</h2>
-                <p className="text-base text-white text-opacity-50 cursor-pointer">See all</p>
+                <p className=" text-white text-sm lg:text-base text-opacity-50 cursor-pointer">See all</p>
             </div>
 
             <div className="w-full">
