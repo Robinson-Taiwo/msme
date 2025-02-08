@@ -19,7 +19,6 @@ import {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious,
 } from "@/components/ui/pagination"
 
 import { Input } from "@/components/ui/input";
@@ -249,19 +248,27 @@ const TransactionComponent = () => {
               {/* <PaginationPrevious href="#" /> */}
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink  className="bg-[#FFD900]"  href="#">1</PaginationLink>
+              <PaginationLink  className="bg-[#FFD900]" isActive   href="#">1</PaginationLink>
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink href="#" className="active:bg-[#FFD900]" isActive>
+              <PaginationLink href="#" className="bg-[#181818] outtline-none border-none hover:bg-[#ffd900] " >
                 2
               </PaginationLink>
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink href="#">3</PaginationLink>
+              <PaginationLink href="#" className="bg-[#181818] outtline-none border-none hover:bg-[#ffd900] " >
+                3
+              </PaginationLink>
             </PaginationItem>
-            <PaginationItem>
+            <PaginationItem className="bg-[#181818] outtline-none border-none hover:bg-[#ffd900] " >
               <PaginationEllipsis />
             </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" className="bg-[#181818] outtline-none border-none hover:bg-[#ffd900] " >
+                10
+              </PaginationLink>
+            </PaginationItem>
+
             <PaginationItem>
               <PaginationNext className="bg-[#FFD900]"  href="#" />
             </PaginationItem>
