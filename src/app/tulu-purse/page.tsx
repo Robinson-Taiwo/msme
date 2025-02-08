@@ -14,8 +14,8 @@ export default function Dashboard() {
 
   return (
     <div className="w-full flex flex-col items-center h-full relative ">
-      <div className="w-[80%]   relative">
-        <Carousel className="w-full max-w-lg relative lg:max-w-[1164px]  mx-auto">
+      <div className=" w-full  relative">
+        <Carousel className="w-full  max-w-[85%] lg:max-w-[85%] relative   mx-auto">
           <CarouselContent className="-ml-1">
             {currencyData.map((currency, index) => (
               <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">

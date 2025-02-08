@@ -8,9 +8,12 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Plus } from "lucide-react";
 import Image from "next/image";
 import carets from "../components/images/carets.png";
+import custom from "../components/images/custom.png";
+import plus from "../components/images/plus.png";
+
+
 
 interface Transaction {
     details: string;
@@ -42,8 +45,7 @@ const TransactionTable: React.FC<TransactionTableProps> = ({ transactions }) => 
                         <TableHead key={heading}>
                             <div className="flex items-center gap-2">
                                 {heading}
-                                <Image src={carets} alt="caret" width={12} height={12} />
-                            </div>
+                                <Image src={carets} alt="caret" width={12} height={12} />                            </div>
                         </TableHead>
                     ))}
                 </TableRow>
@@ -54,9 +56,8 @@ const TransactionTable: React.FC<TransactionTableProps> = ({ transactions }) => 
                     <TableRow key={index} className="text-[white]  h-[71px]">
                         <TableCell className="flex flex-grow h-[71px] flex-row items-center gap-2">
                             {txn.type === "Receive" ? (
-                                <Plus className="text-yellow-500" size={18} />
-                            ) : (
-                                <ArrowRight className="text-yellow-500" size={18} />
+                                <Image src={plus} alt="caret" width={36} height={36} />                            ) : (
+                                    <Image src={custom} alt="caret" width={36} height={36} /> 
                             )}
                             {txn.details}
                         </TableCell>
