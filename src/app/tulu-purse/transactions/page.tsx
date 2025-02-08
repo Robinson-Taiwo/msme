@@ -12,12 +12,20 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
-type Checked = DropdownMenuCheckboxItemProps["checked"]
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 
 import { Input } from "@/components/ui/input";
 import { Calendar, ChevronDown, Search } from "lucide-react";
 import TransactionTable from '@/components/TransactionTable';
+type Checked = DropdownMenuCheckboxItemProps["checked"]
 
 const TransactionComponent = () => {
 
@@ -196,7 +204,7 @@ const TransactionComponent = () => {
           {/* Search Bar */}
           <div className="relative w-[147px]  flex flex-row  ">
             <Search className="absolute border-none outline-none left-2 top-2.5 h-4 w-4 text-white text-opacity-50  " />
-           <Input
+            <Input
               type="search"
               placeholder="Search"
               className="pl-8 w-full rounded-md bg-[#181818] focus:bg-transparent outline-none focus:outline-none focus:border-none border-none "
@@ -231,6 +239,41 @@ const TransactionComponent = () => {
 
       <TransactionTable transactions={transactions} />
 
+      <div className="pt-6 relative  flex items-center justify-between flex-col md:flex-row h-fit w-full">
+
+        <div className="w-fit">
+
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              {/* <PaginationPrevious href="#" /> */}
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink  className="bg-[#FFD900]"  href="#">1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#" className="active:bg-[#FFD900]" isActive>
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink href="#">3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext className="bg-[#FFD900]"  href="#" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+        </div>
+
+<p className="text-white w-fit text-sm text-opacity-50">
+  showing 12 out of 304
+</p>
+
+      </div>
 
     </div>
   )

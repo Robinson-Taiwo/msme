@@ -1,3 +1,4 @@
+// components/Sidebar.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -5,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { useTitle } from "@/components/context/TitleContext";
 
 import frame from "@/components/images/frame.png";
 import logo from "@/components/images/Vector.png";
@@ -17,6 +19,7 @@ import arrows from "@/components/images/tabler-icon-arrows-transfer-down.png";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { setTitle } = useTitle();
 
   const navItems = [
     { img: dashboard, text: "Dashboard", path: "/tulu-purse/" },
@@ -48,9 +51,14 @@ const Sidebar = () => {
         <h2 className="text-xs text-white ml-[39px] mb-9 text-opacity-50">MAIN</h2>
         <div className="navs flex flex-col gap-2 mb-9 w-full">
           {navItems.map(({ img, text, path }, index) => (
-            <Link key={index} href={path} className={`w-full h-[46px] flex items-center pl-[39px] gap-[10px] text-sm transition-colors 
-              ${pathname === path ? "bg-[#181818] border-r border-r-[#FFD900] text-white" : "bg-black text-white/70 hover:text-white"}
-            `}>
+            <Link
+              key={index}
+              href={path}
+              onClick={() => setTitle(text)}
+              className={`w-full h-[46px] flex items-center pl-[39px] gap-[10px] text-sm transition-colors 
+                ${pathname === path ? "bg-[#181818] border-r border-r-[#FFD900] text-white" : "bg-black text-white/70 hover:text-white"}
+              `}
+            >
               <Image src={img} alt="icon" width={16} height={16} />
               <span>{text}</span>
             </Link>
@@ -58,9 +66,13 @@ const Sidebar = () => {
         </div>
 
         <h2 className="text-xs text-white ml-[39px] mb-9 text-opacity-50">ACCOUNT</h2>
-        <Link href="/settings" className={`w-full h-[46px] flex items-center pl-[39px] text-sm transition-colors
-          ${pathname === "/settings" ? "bg-[#181818] text-white" : "bg-black text-white/70 hover:text-white"}
-        `}>
+        <Link
+          href="/settings"
+          onClick={() => setTitle("Settings")}
+          className={`w-full h-[46px] flex items-center pl-[39px] text-sm transition-colors
+            ${pathname === "/settings" ? "bg-[#181818] text-white" : "bg-black text-white/70 hover:text-white"}
+          `}
+        >
           <Image src={settings} alt="settings-icon" width={16} height={16} />
           <span>Settings</span>
         </Link>
